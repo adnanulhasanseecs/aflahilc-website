@@ -63,18 +63,21 @@ export default function Home() {
   const fbReviews = [
     {
       name: "Sarah Ahmed",
+      avatar: undefined,
       content: "Aflah's coaching helped me find clarity in my career path while staying true to my Islamic values. The sessions were transformative.",
       rating: 5,
       date: "2024-01-15"
     },
     {
       name: "Mohammed Hassan",
+      avatar: undefined,
       content: "Professional, insightful, and deeply rooted in faith. Aflah's approach to life coaching is exactly what I needed during a difficult transition.",
       rating: 5,
       date: "2024-01-10"
     },
     {
       name: "Fatima Ali",
+      avatar: undefined,
       content: "The mindfulness techniques combined with Islamic principles have been life-changing. Highly recommend for anyone seeking authentic growth.",
       rating: 5,
       date: "2024-01-08"
