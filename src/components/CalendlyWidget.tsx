@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 interface CalendlyWidgetProps {
   url?: string;
@@ -90,7 +90,7 @@ export default function CalendlyWidget({
             setIsLoading(false);
           }
         }
-      } catch (err) {
+      } catch {
         setError("Failed to load Calendly widget");
         setIsLoading(false);
       }

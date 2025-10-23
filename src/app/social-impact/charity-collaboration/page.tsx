@@ -61,7 +61,7 @@ export default function CharityCollaborationPage() {
                 <div>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">About This Initiative</h2>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    This ongoing collaboration represents our commitment to making life coaching accessible to underserved communities. By partnering with local charities, we're able to reach individuals who might not otherwise have access to professional mental health and personal development services.
+                    This ongoing collaboration represents our commitment to making life coaching accessible to underserved communities. By partnering with local charities, we&apos;re able to reach individuals who might not otherwise have access to professional mental health and personal development services.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     The program focuses on providing culturally sensitive, faith-based coaching that respects the values and circumstances of each participant while offering practical tools for personal growth and resilience.

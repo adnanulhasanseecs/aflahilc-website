@@ -61,7 +61,7 @@ export default function YouthMindfulnessSessionPage() {
                 <div>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">About This Event</h2>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    This specialized session was designed to address the unique challenges faced by young adults in today's fast-paced world. The program combined Islamic mindfulness practices with modern psychology to help participants develop essential life skills for personal and professional success.
+                    This specialized session was designed to address the unique challenges faced by young adults in today&apos;s fast-paced world. The program combined Islamic mindfulness practices with modern psychology to help participants develop essential life skills for personal and professional success.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     Through interactive workshops, group discussions, and practical exercises, young adults learned to manage stress, discover their purpose, and build resilience while staying true to their Islamic values.
@@ -87,11 +87,11 @@ export default function YouthMindfulnessSessionPage() {
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-gray-900 mb-3 text-lg">Participant Feedback</h3>
                       <ul className="text-gray-600 space-y-2">
-                        <li>• "Helped me understand my purpose better"</li>
-                        <li>• "Learned practical stress management techniques"</li>
-                        <li>• "Connected with like-minded peers"</li>
-                        <li>• "Gained confidence in my abilities"</li>
-                        <li>• "Appreciated the Islamic perspective"</li>
+                        <li>• &ldquo;Helped me understand my purpose better&rdquo;</li>
+                        <li>• &ldquo;Learned practical stress management techniques&rdquo;</li>
+                        <li>• &ldquo;Connected with like-minded peers&rdquo;</li>
+                        <li>• &ldquo;Gained confidence in my abilities&rdquo;</li>
+                        <li>• &ldquo;Appreciated the Islamic perspective&rdquo;</li>
                       </ul>
                     </CardContent>
                   </Card>
