@@ -19,22 +19,18 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-        cache-dependency-path: aflah-website/package-lock.json
+        cache-dependency-path: package-lock.json
         
     - name: Install dependencies
-      working-directory: ./aflah-website
       run: npm ci
       
     - name: Run type check
-      working-directory: ./aflah-website
       run: npm run type-check
       
     - name: Run linting
-      working-directory: ./aflah-website
       run: npm run lint
       
     - name: Build application
-      working-directory: ./aflah-website
       run: npm run build
       env:
         NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
@@ -58,16 +54,14 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-        cache-dependency-path: aflah-website/package-lock.json
+        cache-dependency-path: package-lock.json
         
     - name: Install dependencies
-      working-directory: ./aflah-website
       run: npm ci
       
     - name: Configure Next.js for GitHub Pages
-      working-directory: ./aflah-website
       run: |
-        echo "NEXT_PUBLIC_BASE_PATH=/aflah-website" >> .env.local
+        echo "NEXT_PUBLIC_BASE_PATH=" >> .env.local
         echo "NEXT_PUBLIC_GA_MEASUREMENT_ID=${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}" >> .env.local
         echo "NEXT_PUBLIC_EMAILJS_SERVICE_ID=${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}" >> .env.local
         echo "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID }}" >> .env.local
@@ -76,19 +70,16 @@ jobs:
         echo "FB_PAGE_ACCESS_TOKEN=${{ secrets.FB_PAGE_ACCESS_TOKEN }}" >> .env.local
       
     - name: Build for GitHub Pages
-      working-directory: ./aflah-website
       run: npm run build
       
     - name: Export static site
-      working-directory: ./aflah-website
       run: npm run export
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./aflah-website/out
-        destination_dir: aflah-website
+        publish_dir: ./out
         cname: ${{ secrets.CUSTOM_DOMAIN || 'aflah-ilc.com' }}
 
   deploy-vercel:
@@ -106,7 +97,7 @@ jobs:
         vercel-token: ${{ secrets.VERCEL_TOKEN }}
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-        working-directory: ./aflah-website
+        working-directory: ./
         vercel-args: '--prod'
 
   deploy-netlify:
@@ -123,14 +114,12 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-        cache-dependency-path: aflah-website/package-lock.json
+        cache-dependency-path: package-lock.json
         
     - name: Install dependencies
-      working-directory: ./aflah-website
       run: npm ci
       
     - name: Build application
-      working-directory: ./aflah-website
       run: npm run build
       env:
         NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
@@ -143,7 +132,7 @@ jobs:
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v3.0
       with:
-        publish-dir: './aflah-website/.next'
+        publish-dir: './.next'
         production-branch: main
         github-token: ${{ secrets.GITHUB_TOKEN }}
         deploy-message: "Deploy from GitHub Actions"
