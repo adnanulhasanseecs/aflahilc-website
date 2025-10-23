@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   // Set the correct root directory to avoid lockfile conflicts
   outputFileTracingRoot: __dirname,
   // GitHub Pages static export configuration
-  output: process.env.NEXT_PUBLIC_BASE_PATH ? "export" : undefined,
+  output: "export",
   trailingSlash: true,
   images: {
     unoptimized: true,

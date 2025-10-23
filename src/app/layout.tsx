@@ -16,6 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://aflah-ilc.com'),
   title: "Aflah Islamic Life Coaching Services | Empowering Growth Through Faith",
   description: "Professional life coaching and corporate consultancy services rooted in Islamic values. Empowering growth through faith, purpose, and professional excellence.",
   keywords: "Islamic life coaching, corporate coaching, mindfulness, leadership development, faith-based coaching",
