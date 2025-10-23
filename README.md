@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project for Aflah Islamic Life Coaching 
 ## Deployment Status
 - ✅ GitHub Actions configured
 - ✅ Repository permissions updated  
+- ✅ Personal Access Token configured
 - ✅ Ready for deployment
 
 ## Live URLs
