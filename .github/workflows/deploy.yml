@@ -73,13 +73,13 @@ jobs:
       run: npm run build
       
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
-        cname: ${{ secrets.CUSTOM_DOMAIN || 'aflah-ilc.com' }}
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
+        folder: ./out
+        branch: gh-pages
+        clean: true
+        single-commit: true
 
   deploy-vercel:
     needs: test
