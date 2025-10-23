@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aflah Islamic Life Coaching Website
+
+This is a [Next.js](https://nextjs.org) project for Aflah Islamic Life Coaching Services.
+
+## Deployment Status
+- ✅ GitHub Actions configured
+- ✅ Repository permissions updated  
+- ✅ Ready for deployment
+
+## Live URLs
+- GitHub Pages: https://adnanulhasanseecs.github.io/aflahilc-website
+- Custom Domain: https://aflah-ilc.com (after DNS propagation)
 
 ## Getting Started
 
