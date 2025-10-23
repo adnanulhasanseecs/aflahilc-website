@@ -6,6 +6,7 @@ This is a [Next.js](https://nextjs.org) project for Aflah Islamic Life Coaching 
 - ✅ GitHub Actions configured
 - ✅ Repository permissions updated  
 - ✅ Personal Access Token configured
+- ✅ JamesIves action configured
 - ✅ Ready for deployment
 
 ## Live URLs
