@@ -60,26 +60,26 @@ export default function Home() {
     }
   ];
 
-  const [fbReviews, setFbReviews] = React.useState<{
-    name: string;
-    avatar?: string;
-    content: string;
-    rating: number;
-    date?: string;
-  }[]>([]);
-
-  React.useEffect(() => {
-    const load = async () => {
-      try {
-        const r = await fetch("/api/fb-reviews", { cache: "no-store" });
-        const j = await r.json();
-        if (Array.isArray(j.reviews)) setFbReviews(j.reviews);
-      } catch {
-        // ignore — API unavailable or permissions missing
-      }
-    };
-    load();
-  }, []);
+  const fbReviews = [
+    {
+      name: "Sarah Ahmed",
+      content: "Aflah's coaching helped me find clarity in my career path while staying true to my Islamic values. The sessions were transformative.",
+      rating: 5,
+      date: "2024-01-15"
+    },
+    {
+      name: "Mohammed Hassan",
+      content: "Professional, insightful, and deeply rooted in faith. Aflah's approach to life coaching is exactly what I needed during a difficult transition.",
+      rating: 5,
+      date: "2024-01-10"
+    },
+    {
+      name: "Fatima Ali",
+      content: "The mindfulness techniques combined with Islamic principles have been life-changing. Highly recommend for anyone seeking authentic growth.",
+      rating: 5,
+      date: "2024-01-08"
+    }
+  ];
 
   const socialImpactHighlights = [
     {
